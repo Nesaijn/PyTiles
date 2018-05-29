@@ -71,11 +71,11 @@ def button(msg, x, y, width, height, icolor, acolor, action=None):
     else:
         pygame.draw.rect(gameDisplay, icolor, (x, y, width, height))
 
-    text((x + (width / 2)), (y + (height / 2)), msg, 20, "FreeSansBold.ttf", white)
+    text((x + (width / 2)), (y + (height / 2)), msg, 20, "resources/FreeSansBold.ttf", white)
 
 
 def gameover():
-    text((display_width / 2), (display_height / 3), "You Fucked up", 70, "ARCADE.TTF", red)
+    text((display_width / 2), (display_height / 3), "Game Over", 70, "resources/ARCADE.TTF", red)
     pygame.display.update()
     time.sleep(2)
     game()
@@ -88,7 +88,7 @@ def start_menu():
                 quitgame()
 
         gameDisplay.fill(white)
-        text((display_width / 2), (display_height / 2 - 50), "Py Tiles", 115, "ARCADE.TTF", black)
+        text((display_width / 2), (display_height / 2 - 50), "Py Tiles", 115, "resources/ARCADE.TTF", black)
         button("Go!", (display_width / 2 - 75), (display_height * 0.65), 150, 50, black, grey, game)
         button("Exit", (display_width / 2 - 75), (display_height * 0.75), 150, 50, black, grey, quitgame)
 
